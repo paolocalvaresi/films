@@ -7,9 +7,9 @@ var controller = require('./controller')
 // LISTA DI TUTTI I FILMS
 router.get('/', controller.getAll)
 // DETTAGLIO DEL FILM
-router.get('/:id([0-9]{1,4})', controller.getOne)
+router.get('/:movieid([0-9]{1,4})', controller.getOne)
 // CREAZIONE DI UN FILM
-router.post('/', controller.creaFilm)
+router.post('/:id([0-9]{1,4})', controller.creaFilm)
 // MODIFICA DI UN FILM
 router.put('/:id([0-9]{1,4})', controller.modificaFilm)
 // VOTO IL FILM
